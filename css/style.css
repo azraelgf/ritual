@@ -357,6 +357,7 @@ textarea {
   width: 100%;
   display: block;
   padding: 0px 20px;
+  font-size: 1rem;
   height: 3.25rem;
   background-color: var(--accent-300);
   color: #fff;
@@ -717,6 +718,25 @@ textarea.input {
 .title {
   font-weight: 700;
   line-height: 1.2;
+}
+
+.credit-img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  padding-bottom: 50%;
+}
+
+ol {
+  padding-left: 1.25rem;
+}
+
+ol li {
+  line-height: 120%;
+}
+
+ol li + li {
+  margin-top: 0.625rem;
 }
 
 .header {
@@ -1619,6 +1639,11 @@ textarea.input {
   display: flex;
 }
 
+.content-grid__map iframe {
+  width: 100%;
+  height: 21.875rem;
+}
+
 .content-grid__img {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
@@ -1645,6 +1670,11 @@ textarea.input {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: var(--accent-100);
+}
+
+.side__icon img {
+  width: 9rem;
+  height: 9rem;
 }
 
 .side__icon svg {
@@ -2247,6 +2277,10 @@ textarea.input {
     margin-bottom: 2rem;
   }
 
+  .content-grid__map:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
   .help__container {
     gap: 6.25rem;
   }
@@ -2641,6 +2675,10 @@ textarea.input {
   }
 
   .content-grid__images:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
+  .content-grid__map:not(:last-child) {
     margin-bottom: 1.25rem;
   }
 
@@ -3990,6 +4028,18 @@ textarea.input {
 
 @supports not (margin-bottom: clamp( 1.25rem , 0.9772727273rem  +  1.3636363636vw , 2rem )) {
     .content-grid__images:not(:last-child) {
+      margin-bottom: calc(1.25rem + 0.75 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (margin-bottom: clamp( 1.25rem , 0.9772727273rem  +  1.3636363636vw , 2rem )) {
+    .content-grid__map:not(:last-child) {
+      margin-bottom: clamp( 1.25rem , 0.9772727273rem  +  1.3636363636vw , 2rem );
+    }
+}
+
+@supports not (margin-bottom: clamp( 1.25rem , 0.9772727273rem  +  1.3636363636vw , 2rem )) {
+    .content-grid__map:not(:last-child) {
       margin-bottom: calc(1.25rem + 0.75 * (100vw - 20rem) / 55);
     }
 }
