@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240326233242">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240327145626">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -113,7 +113,7 @@
 							материальным воплощением вашей любви к близкому человеку.
 						</div>
 						<div class="hero__action">
-							<a href="" class="button _icon-user">Вызвать ритуального агента</a>
+							<a href="" class="button _icon-user" data-popup="#call">Вызвать ритуального агента</a>
 							<a href="" class="button button_outline _icon-coast">Расчитать стоимость</a>
 						</div>
 						<div class="hero__accent">
@@ -898,6 +898,9 @@
 							</div>
 						</div>
 					</div>
+					<div class="blog__more">
+						<a href="" class="blog__btn button button_brown">Все статьи</a>
+					</div>
 				</div>
 			</section>
 			<section class="feedback">
@@ -1036,7 +1039,37 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20240326233242"></script>
+	<div id="call" aria-hidden="true" class="popup popup_call">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__text">
+					<div class="popup__form">
+						<button data-close type="button" class="popup__close _icon-close"></button>
+						<h3 class="popup__title title">Заказать расчет</h3>
+						<div class="popup__form-text">Заполните ваши контакты и мы вам перезвоним</div>
+						<form action="#" class="form">
+							<div class="form__row">
+								<input class="form__input input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Ваше имя">
+							</div>
+							<div class="form__row">
+								<input class="form__input input" autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Номер телефона">
+							</div>
+							<div class="form__row">
+								<button class="form__button button" type="submit">Отправить</button>
+								<div class="form__agree">
+									Нажимая кнопку «Отправить» вы соглашаетесь с <a href="">политикой обработки персональных
+										данных</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/app.min.js?_v=20240327145626"></script>
 </body>
 
 </html>
