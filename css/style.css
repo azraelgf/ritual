@@ -4045,6 +4045,7 @@ ol li + li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 100%;
   }
 
   .blog-item__text {
