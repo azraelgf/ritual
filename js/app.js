@@ -725,8 +725,8 @@
     const da = new DynamicAdapt("max");
     da.init();
     document.addEventListener("click", documentActions);
-    document.addEventListener("mouseover", documentActions);
-    function documentActions(e) {
+    document.addEventListener("mouseover", documentActionsH);
+    function documentActionsH(e) {
         const targetElement = e.target;
         if (window.matchMedia("(min-width: 991.98px").matches) {
             if (targetElement.closest("[data-parent]")) {
@@ -747,6 +747,13 @@
                 activeBlock ? activeBlock.classList.remove("_submenu-open") : null;
                 activeLink ? activeLink.classList.remove("_submenu-open--active") : null;
             }
+        }
+    }
+    function documentActions(e) {
+        const targetElement = e.target;
+        if (targetElement.closest(".checkbox__input")) {
+            const tabik = targetElement.value, totalPrice = targetElement.parentElement.parentElement.parentElement.parentElement.parentElement.querySelector(".price-product__value span");
+            totalPrice.innerHTML = new Intl.NumberFormat("ru-RU").format(tabik);
         }
     }
     window["FLS"] = false;
