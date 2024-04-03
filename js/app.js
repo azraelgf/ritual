@@ -725,6 +725,7 @@
     const da = new DynamicAdapt("max");
     da.init();
     document.addEventListener("click", documentActions);
+    document.addEventListener("mouseover", documentActions);
     function documentActions(e) {
         const targetElement = e.target;
         if (window.matchMedia("(min-width: 991.98px").matches) {
